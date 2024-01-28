@@ -1,0 +1,109 @@
+/* Color Pallete */
+@import "../ColorPallete.module.scss"; 
+
+.title{
+    color: $Grey;
+    font-size: xx-large;
+    margin: 1em 24px 1em 24px;
+}
+
+.bodyBackground{
+    background-color: $backgroundWhite;
+    padding: 1em 24px 1em 24px;
+}
+
+.header{
+    color: $BlueGreen;
+    font-size: xx-large;
+}
+
+.paragrapsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+.introParagraph{
+    flex: 2;
+    font-size: x-large;
+}
+.logoContainer{
+    position: relative;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+}
+
+.subheader{
+    font-size: xx-large;
+    color: $Blue;
+}
+
+.paragraph{
+    font-size: large;
+
+}
+
+/*Scale to Small Screens */
+@media only screen and (max-width: 768px) {
+    .title{
+        font-size: x-large;
+    }
+    .header{
+        font-size: x-large;
+    }
+    .introParagraph{
+        font-size: large;
+    }
+    .subheader{
+        font-size: large;
+    }
+    .paragraph{
+        font-size: medium;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .title{
+        font-size: large;
+        margin: 1em 12px 1em 12px;
+    }
+    .bodyBackground{
+        padding: 1em 12px 1em 12px;
+    }
+    .header{
+        font-size: large;
+    }
+    .introParagraph{
+        font-size: medium;
+    }
+    .subheader{
+        font-size: medium;
+    }
+    .paragraph{
+        font-size: x-small;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .title{
+        font-size: medium;
+    }
+    .header{
+        font-size: medium;
+    }
+    .introParagraph{
+        font-size: small;
+    }
+    .subheader{
+        font-size: small;
+    }
+    .paragraph{
+        font-size: xx-small;
+    }
+}
+
+

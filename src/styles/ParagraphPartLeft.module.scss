@@ -1,0 +1,70 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.paragraphPart{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.paragraphOverlay{
+    z-index: 2;
+    position: absolute;
+    right: 45%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    background-color: rgba($color: $BlueGreenTinted, $alpha: 0.9);
+    border-radius: 0.4em;
+}
+
+.overlayHeader{
+    text-align: right;
+    color: $GreyShaded;
+    font-size: x-large;
+}
+
+.overlayText{
+    text-align: right;
+    color: $Grey;
+    font-size: large;
+}
+
+.imageContainer{
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .overlayHeader{
+        font-size: large;
+    }
+    .overlayText{
+        font-size: medium;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .paragraphOverlay{
+        gap: 0.4em;
+        padding: 0.6em;
+    }
+    .overlayHeader{
+        font-size: small;
+    }
+    .overlayText{
+        font-size: x-small;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .paragraphOverlay{
+        gap: 0.1em;
+        padding: 0.4em;
+    }
+    .overlayHeader{
+        font-size: x-small;
+    }
+    .overlayText{
+        font-size: xx-small;
+    }
+}

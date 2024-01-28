@@ -1,0 +1,115 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.productContainer{
+    width: auto;
+    height: fit-content;
+    padding: 24px;
+    background-color: $backgroundWhite;
+}
+
+.imageContainer{
+    flex: 1;
+}
+
+.image{
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
+}
+
+.layer1{
+    display: flex;
+    flex-direction: row;
+}
+.layer2{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    gap: 0.8em;
+    margin-left: 1.5em;
+}
+
+.prodName{
+	font-size: xx-large;
+    color: $BlueGreen;
+}
+
+.prodBrand{
+	font-size: x-large;
+}
+
+.descriptionH1{
+    font-size: large;
+}
+.description{
+    font-size: medium;
+    white-space: pre-wrap;
+}
+
+.specsH1{
+    font-size: large;
+}
+.specs{
+    font-size: medium;
+}
+
+.packagesHeader{
+    font-size: x-large;
+    color: $Blue;
+    margin: 1em 0 1em 0;
+}
+.packageList{
+    display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
+
+/* Scale to Small Screens */
+@media only screen and (max-width: 860px) {
+    .packageList {
+    	grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media only screen and (max-width: 768px) {
+    .layer1 {
+    	flex-direction: column;
+    }
+    .imageContainer{
+        width: 60vw;
+        align-self: center;
+    }
+    .layer2{
+        margin-left: 0;
+        margin-top: 1em;
+    }
+    .packagesHeader{
+        font-size: larger;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .productContainer{
+        padding: 12px;
+    }
+	.prodName{
+        font-size: x-large;
+    }
+    .prodBrand{
+        font-size: large;
+    }
+    .descriptionH1{
+        font-size: medium;
+    }
+    .description{
+        font-size: small;
+    }
+    .specsH1{
+        font-size: medium;
+    }
+    .specs{
+        font-size: small;
+    }
+    .packagesHeader{
+        font-size: medium;
+    }
+}

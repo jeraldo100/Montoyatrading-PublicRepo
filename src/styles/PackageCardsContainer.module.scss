@@ -1,0 +1,12 @@
+.PackageCardsContainer{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
+
+/* Scale to Small Screens */
+@media only screen and (max-width: 860px) {
+    .PackageCardsContainer {
+    	grid-template-columns: repeat(1, 1fr);
+	}
+}

@@ -1,0 +1,71 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.statisticsContainer{
+	display: flex;
+	flex-direction: row;
+	gap: 2em;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.statistic{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	align-items: center;
+	padding: 1em;
+	background-color: $BlueGreen;
+	height: 300px;
+	aspect-ratio: 5 / 6;
+	border-radius: 0.4em;
+}
+
+.icon{
+	font-size: 96px;
+	color: white;
+}
+
+.stat{
+	font-size: xx-large;
+	color: $Grey;
+}
+
+.text{
+	font-size: x-large;
+	color: white;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+/* Scale to Small Screens */
+@media only screen and (max-width: 768px) {
+	.statistic{
+		height: 200px;
+	}
+	.icon{
+		font-size: 64px;
+	}
+	.stat{
+		font-size: x-large;
+	}
+	.text{
+		font-size: large;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.stat{
+		font-size: large;
+	}
+	.text{
+		font-size: medium;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.stat{
+		font-size: medium;
+	}
+	.text{
+		font-size: small;
+	}
+}

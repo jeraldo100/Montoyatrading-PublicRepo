@@ -1,0 +1,93 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.paginationContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: fit-content;
+	width: auto;
+	padding: 1em;
+	font-size: medium;
+}
+
+.pageNums{
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	border-top: 1px solid $BlueGreen;
+	border-bottom: 1px solid $BlueGreen;
+}
+
+.page{
+	width: fit-content;
+	padding: 0.6em;
+	
+	
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	
+	transition: 0.3s;
+}
+.page:hover{
+	cursor: pointer;
+	color: white;
+	background-color: $BlueGreen;
+}
+
+.first{
+	width: fit-content;
+	padding: 0.6em;
+	color: white;
+	background-color: $BlueGreen;
+	border: 1px solid $BlueGreen;
+	border-bottom-left-radius: 2em;
+	border-top-left-radius: 2em;
+	user-select: none;
+	transition: 0.3s;
+}
+.first:hover{
+	cursor: pointer;
+	color: $BlueGreen;
+	background-color: white;
+}
+
+.last{
+	width: fit-content;
+	padding: 0.6em;
+	color: white;
+	background-color: $BlueGreen;
+	border: 1px solid $BlueGreen;
+	border-bottom-right-radius: 2em;
+	border-top-right-radius: 2em;
+	user-select: none;
+	transition: 0.3s;
+}
+.last:hover{
+	cursor: pointer;
+	color: $BlueGreen;
+	background-color: white;
+}
+
+.btnIcon{
+	position: relative;
+	top: 3px;
+}
+
+
+/* Scale to Small Screens */
+@media only screen and (max-width: 768px) {
+    .paginationContainer{
+		font-size: small;
+	}
+}
+@media only screen and (max-width: 640px) {
+    .paginationContainer{
+		font-size: x-small;
+	}
+}
+@media only screen and (max-width: 480px) {
+    .paginationContainer{
+		font-size: xx-small;
+	}
+}

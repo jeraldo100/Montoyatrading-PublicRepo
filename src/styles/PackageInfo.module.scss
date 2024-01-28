@@ -1,0 +1,113 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.packageInfoContainer{
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	background-color: $backgroundWhite;
+}
+
+.imgAndInfo{
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.imgContainer{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.image{
+	aspect-ratio: 1 / 1;
+	width: 100%;
+	object-fit: contain;
+}
+
+.infoContainer{
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	margin: 0.6em 0 0 1em;
+}
+
+.name{
+	font-size: x-large;
+	color: $BlueGreen;
+}
+
+.descH2{
+	font-size: large;
+    margin-top: 0.6em;
+}
+.description{
+	font-size: medium;
+	white-space: pre-wrap;
+}
+
+.inclusionsHeader{
+	font-size: x-large;
+	color: $Blue;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+	.imgAndInfo{
+		flex-direction: column;
+	}
+	.imgContainer{
+		width: 50vw;
+		align-self: center;
+	}
+	.infoContainer{
+		margin: 1em 0 0 0;
+	}
+	.name{
+		font-size: large;
+	}
+	.description{
+		font-size: small;
+	}
+	.inclusionsHeader{
+		font-size: large;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.packageInfoContainer{
+		padding: 12px;
+	}
+	.imgContainer{
+		width: 60vw;
+	}
+	.name{
+		font-size: medium;
+	}
+	.descH2{
+		font-size: medium;
+	}
+	.description{
+		font-size: x-small;
+	}
+	.inclusionsHeader{
+		font-size: medium;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.name{
+		font-size: small;
+	}
+	.descH2{
+		font-size: small;
+	}
+	.description{
+		font-size: xx-small;
+	}
+	.inclusionsHeader{
+		font-size: small;
+	}
+}

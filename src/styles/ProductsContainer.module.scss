@@ -1,0 +1,19 @@
+.ProductsContainer{
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    transition: 0.3s;
+}
+
+/* Scale to Small Screens */
+@media only screen and (max-width: 768px) {
+    .ProductsContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 540px) {
+	.ProductsContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

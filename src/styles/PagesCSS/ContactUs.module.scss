@@ -1,0 +1,104 @@
+/* Color Pallete */
+@import "../ColorPallete.module.scss"; 
+
+.header{
+    font-size: xx-large;
+    color: $Grey;
+    margin: 1em 24px 1em 24px;
+}
+
+.contactsContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 1em 24px 1em 24px;
+    background-color: $backgroundWhite;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    border: solid 1px $Blue;
+    border-radius: 1em;
+    background-color: white;
+}
+.icon{
+	font-size: 3rem;
+    color: $Blue;
+}
+.contactHeader1{
+    font-size: x-large;
+    color: $Grey;
+}
+.contactHeader2{
+    font-size: large;
+    color: $Grey;
+}
+.contactText{
+    text-align: center;
+    font-size: medium;
+}
+
+@media only screen and (max-width: 900px) {
+    .contactsContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .header{
+        font-size: x-large;
+    }
+    .icon{
+        font-size: 2.5rem;
+    }
+    .contactHeader1{
+        font-size: large;
+    }
+    .contactHeader2{
+        font-size: medium;
+    }
+    .contactText{
+        font-size: small;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .header{
+        font-size: large;
+        margin: 1em 12px 1em 12px;
+    }
+    .contactsContainer{
+        padding: 1em 12x 1em 12px;
+    }
+    .icon{
+        font-size: 2rem;
+    }
+    .contactHeader1{
+        font-size: medium;
+    }
+    .contactHeader2{
+        font-size: small;
+    }
+    .contactText{
+        font-size: x-small;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .header{
+        font-size: medium;
+    }
+    .icon{
+        font-size: 1.8rem;
+    }
+    .contactHeader1{
+        font-size: small;
+    }
+    .contactHeader2{
+        font-size: x-small;
+    }
+    .contactText{
+        font-size: xx-small;
+    }
+}

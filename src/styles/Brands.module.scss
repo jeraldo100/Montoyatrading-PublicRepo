@@ -1,0 +1,28 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.brandsContainer{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.header{
+	font-size: x-large;
+	color: $BlueGreen;
+}
+
+.brands{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2em;
+}
+
+.logoContainer{
+	position: relative;
+	width: 128px;
+	aspect-ratio: 1 / 1;
+	cursor: pointer;
+}

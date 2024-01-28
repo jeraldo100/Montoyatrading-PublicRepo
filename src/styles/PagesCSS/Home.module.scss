@@ -1,0 +1,78 @@
+/* Color Pallete */
+@import "@/styles/ColorPallete.module.scss"; 
+
+.headlineContainer{
+	background-color: $backgroundWhite;
+	padding: 1em 24px 2em 24px;
+}
+
+.section{
+	padding: 1em 24px 1em 24px;
+}
+.subsection{
+	background-color: $backgroundWhite;
+	padding: 1em 24px 1em 24px;
+}
+
+.packagesContainer{
+	display: flex;
+	flex-direction: column;
+	gap: 0.8em;
+	padding: 1em 24px 1em 24px;
+}
+.selectionHeaderText{
+	font-size: xx-large;
+	color: $BlueGreen;
+}
+.selectionHeader{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.viewMore{
+	font-size: large;
+	color: $BlueGreen;
+	text-decoration: none;
+	align-self: last baseline;
+}
+.icons{
+	position: relative;
+	top: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+	.selectionHeaderText{
+		font-size: x-large;
+	}
+	.viewMore{
+		font-size: medium;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.headlineContainer{
+		padding: 1em 12px 2em 12px;
+	}
+	.section{
+		padding: 1em 12px 1em 12px;
+	}
+	.subsection{
+		padding: 1em 12px 1em 12px;
+	}
+	.packagesContainer{
+		padding: 1em 12px 1em 12px;
+	}
+	.selectionHeaderText{
+		font-size: large;
+	}
+	.viewMore{
+		font-size: small;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.selectionHeaderText{
+		font-size: medium;
+	}
+	.viewMore{
+		font-size: small;
+	}
+}

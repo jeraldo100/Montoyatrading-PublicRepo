@@ -1,0 +1,57 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.notFound{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 25vw;
+	color: $Grey;
+}
+
+.icon{
+	width: fit-content;
+	justify-self: center;
+	font-size: 100px;
+}
+
+.text{
+	width: fit-content;
+	justify-self: center;
+	font-size: medium;
+}
+
+@media only screen and (max-width: 768px) {
+    .notFound{
+		height: 50vw;
+	}
+	.icon{
+		font-size: 70px;
+	}
+	.text{
+		font-size: small;
+	}
+}
+@media only screen and (max-width: 640px) {
+    .notFound{
+		height: 70vw;
+	}
+	.icon{
+		font-size: 50px;
+	}
+	.text{
+		font-size: x-small;
+	}
+}
+@media only screen and (max-width: 480px) {
+    .notFound{
+		height: 80vw;
+	}
+	.icon{
+		font-size: xx-large;
+	}
+	.text{
+		font-size: xx-small;
+	}
+}

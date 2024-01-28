@@ -1,0 +1,183 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.NavBar{
+	display: flex;
+    width: auto;
+	height: fit-content;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 24px;
+	background-color: $Grey;
+	justify-content: space-between;
+	gap: 0.8rem;
+	position: sticky;
+	top: 0;
+	z-index: 4;
+}
+
+.NavStart, .NavEnd{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.8em;
+}
+
+.desktopOptions{
+	display: flex;
+	flex-direction: row;
+	gap: 0.8em;
+}
+
+.homeLinkContainer{
+	display: flex;
+	flex-direction: row;
+	gap: 0.4em;
+	align-items: center;
+	text-decoration: none;
+	padding: 0em 24px 0em 1em;
+}
+.HomeLink{
+	font-size: x-large;
+	color: $BlueGreen;
+	
+	transition: 0.3s;
+	white-space: nowrap;
+}
+.logoContainer{
+	position: relative;
+	width: 64px;
+	aspect-ratio: 109 /78;
+}
+
+.NavLinks{
+	text-decoration: none;
+	font-size: medium;
+	color: white;
+	padding: 0.8em;
+	transition: 0.3s;
+	position: relative;
+	white-space: nowrap;
+	z-index: 0;
+}
+
+.NavLinksIcons{
+	position: relative;
+	top: 2px;
+}
+
+.NavLinks::before{
+	background: $BlueGreen;
+	content: "";
+	inset: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.3s ease-in-out;
+	z-index: -1;
+}
+
+.NavLinks:hover::before{
+	transform: scaleX(1);
+ 	transform-origin: left;
+}
+
+.offCanvasBtn{
+	display: none;
+	font-size: x-large;
+	color: $BlueGreen;
+	height: fit-content;
+	width: fit-content;
+	padding: 0.2em;
+	transition: 0.3s;
+}
+.offCanvasBtn:hover{
+	color: white;
+	cursor: pointer;
+}
+
+.offCanvas{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 60vw;
+	height: 100vh;
+	background-color: rgba($color: $Grey, $alpha: 0.9);
+	padding: 1em;
+	z-index: 5;
+}
+.offCanvasEnterActive{
+	opacity: 0;
+	transform: translateX(60vw);
+}
+.offCanvasEnterDone{
+	opacity: 1;
+	transform: translateX(0);
+	transition: 300ms;
+}
+.offCanvasExit{
+	opacity: 1;
+	transform: translateX(0);
+}
+.offCanvasExitActive{
+	opacity: 0;
+	transform: translateX(60vw);
+	transition: 300ms;
+}
+
+.offCanvasClose{
+	color: $BlueGreen;
+	font-size: xx-large;
+	transition: 0.3s;
+}
+.offCanvasClose:hover{
+	cursor: pointer;
+	color: white;
+}
+
+.offCanvasNav{
+	display: flex;
+	flex-direction: column;
+	gap: 0.6em;
+	font-size: x-small;
+	align-items: center;
+	text-decoration: none;
+}
+
+/* Link text Scale to Small Screens */
+@media only screen and (max-width: 860px) {
+    .HomeLink {
+    	font-size: large;
+    }
+	.NavLinks{
+		font-size: small;
+	}
+}
+@media only screen and (max-width: 768px) {
+    .HomeLink {
+    	font-size: medium;
+    }
+	.NavLinks{
+		font-size: x-small;
+	}
+	.logoContainer{
+		width: 32px;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.NavBar{
+		padding-right: 12px;
+	}
+	.homeLinkContainer{
+		padding: 0em 12px 0em 1em;
+	}
+	.desktopOptions{
+		display: none;
+	}
+	.offCanvasBtn{
+		display: block;
+	}
+	.NavLinks{
+		font-size: medium;
+	}
+}

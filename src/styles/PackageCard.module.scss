@@ -1,0 +1,130 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.packageCard{
+	display: flex;
+	flex-direction: row;
+	background-color: $backgroundWhite;
+	padding: 0.6em;
+	aspect-ratio: 3 / 1;
+	border-radius: 0.4em;
+	box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.22);
+	transition: 0.3s;
+}
+.packageCard:hover{
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.22);
+}
+
+.imgContainer{
+	flex: 3;
+	height: fit-content;
+}
+
+.image{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	aspect-ratio: 1 / 1;
+}
+
+.infoContainer{
+	flex: 4;
+	display: grid;
+	grid-template-rows: 1fr 4fr 2fr;
+	gap: 8px;
+	margin: 0.4em 1em 0em 1em;
+	justify-content: space-around;
+}
+
+.name{
+	font-size: medium;
+	color: $Blue;
+	height: fit-content;
+}
+
+.descContainer{
+	overflow: hidden;
+	position: relative;
+}
+
+.descContainer:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0), $backgroundWhite 90%);
+	width: 100%;
+	height: 2em;
+}
+
+.description{
+	font-size: x-small;
+	white-space: pre-wrap;
+}
+
+.btns{
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	justify-content: space-between;
+}
+
+.totalItems{
+	font-size: smaller;
+	background-color: $Blue;
+	border: solid 2px;
+	border-color: $Blue;
+	border-radius: 2em;
+	padding: 0.6em;
+	color: white;
+	width: fit-content;
+	height: fit-content;
+	text-wrap: nowrap;
+}
+
+.detailsBtn{
+	font-size: smaller;
+	border: solid 2px;
+	border-color: $Blue;
+	border-radius: 2em;
+	padding: 0.6em;
+	color: $Blue;
+	width: fit-content;
+	height: fit-content;
+	transition: 0.3s;
+}
+
+.detailsBtn:hover{
+	background-color: $Blue;
+	color: white;
+	cursor: pointer;
+}
+
+/* Link text Scale to Small Screens */
+@media only screen and (max-width: 768px) {
+    .name{
+		font-size: small;
+	}
+	.totalItems{
+		font-size: x-small;
+	}
+	.detailsBtn{
+		font-size: x-small;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.name{
+		font-size: smaller;
+	}
+	.totalItems{
+		font-size: x-small;
+	}
+	.detailsBtn{
+		font-size: xx-small;
+	}
+	.description{
+		font-size: xx-small;
+	}
+}

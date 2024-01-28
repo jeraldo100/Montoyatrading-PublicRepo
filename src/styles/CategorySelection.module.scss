@@ -1,0 +1,66 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.categorySelection{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.header{
+	font-size: x-large;
+	color: $BlueGreen;
+}
+
+.btns{
+	display: flex;
+	flex-direction: row;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.btn{
+	padding: 1em;
+	border: solid 1px $Blue;
+	border-radius: 1em;
+	font-size: medium;
+	color: $Blue;
+	transition: 0.3s;
+	background-color: white;
+}
+.icon{
+	position: relative;
+	top: 2px;
+}
+.btn:hover{
+	cursor: pointer;
+	background-color: $Blue;
+	color: white;
+}
+
+// Scale to smaller screens
+@media only screen and (max-width: 768px) {
+	.header{
+		font-size: large;
+	}
+	.btn{
+		font-size: small;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.header{
+		font-size: medium;
+	}
+	.btn{
+		font-size: x-small;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.header{
+		font-size: small;
+	}
+	.btn{
+		font-size: xx-small;
+	}
+}

@@ -1,0 +1,102 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.text, .category, .question {
+    border: 1px solid #ccc;
+    font-size: large;
+    padding: 0.6em;
+    transition: 0.2s;
+}
+
+.text:focus, .category:focus, .question:focus{
+    outline: none;
+    border: 1px solid $Blue;
+}
+
+.nameContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.fnameContainer, .lnameContainer, .emailContainer, .categoryContainer, .questionContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    flex: 1;
+}
+
+.labels{
+    color: $Grey;
+    font-size: larger;
+}
+
+.question{
+    resize: none;
+    width: auto;
+    height: 10em;
+}
+
+.submitContainer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.submitButon{
+    padding: 0.8em;
+    font-size: larger;
+    color: white;
+    background-color: $Grey;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.submitButon:hover{
+    background-color: $BlueGreen;
+}
+
+@media only screen and (max-width: 768px) {
+    .nameContainer{
+        flex-direction: column;
+    }
+    .labels{
+        font-size: large;
+    }
+    .submitButon{
+        font-size: large;
+    }
+    .text, .category, .question{
+        font-size: large;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .labels{
+        font-size: medium;
+    }
+    .submitButon{
+        font-size: medium;
+    }
+    .text, .category, .question{
+        font-size: medium;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .labels{
+        font-size: small;
+    }
+    .submitButon{
+        font-size: small;
+    }
+    .text, .category, .question{
+        font-size: small;
+    }
+}

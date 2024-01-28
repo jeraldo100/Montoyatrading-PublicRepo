@@ -1,0 +1,69 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.ProductCard{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    border-radius: 5px;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.22);
+    transition: 0.3s;
+}
+.ProductCard:hover{
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.22);
+}
+
+.ProductCardTop{
+    overflow: hidden;
+	position: relative;
+    padding: 10px;
+    height: 20%;
+    width: auto;
+    font-size: small;
+    color: white;
+    background-color: $BlueGreen;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.ProductCardTop:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0), $BlueGreen 90%);
+	width: 100%;
+	height: 1em;
+}
+
+.ProductCardBody{
+    padding: 10px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.productImg{
+    width: 95%;
+    aspect-ratio: 1 / 1;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+/* Product Card Scale to Small Screens */
+@media only screen and (max-width: 768px) {
+    .ProductCardTop{
+        font-size: x-small;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .ProductCardTop {
+        font-size: xx-small;
+    }
+}

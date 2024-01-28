@@ -1,0 +1,143 @@
+/* Color Pallete */
+@import "./ColorPallete.module.scss"; 
+
+.searchForm{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: fit-content;
+	width: auto;
+	padding: 1em;
+}
+
+.textBox{
+	width:25em;
+	padding: 0.6em;
+	font-size: medium;
+	border: 1px solid #ccc;
+	border-bottom-left-radius: 2em;
+	border-top-left-radius: 2em;
+	transition: 0.3s;
+}
+
+.textBox:focus{
+	outline: none;
+    border: 1px solid $BlueGreen;
+}
+
+.btn{
+	width: fit-content;
+	padding: 0.6em;
+	background-color: $BlueGreen;
+	font-size: medium;
+	white-space: nowrap;
+	color: white;
+	position: relative;
+	user-select: none;
+	border-bottom-right-radius: 2em;
+	border-top-right-radius: 2em;
+	transition: 0.3s;
+}
+
+.btnIcon{
+	position: relative;
+	top: 3px;
+	transition: 0.3s;
+}
+
+.btn:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.category{
+	position: relative;
+	font-size: medium;
+}
+
+.categoryBtn{
+	width: fit-content;
+	padding: 0.6em;
+	white-space: nowrap;
+	color: white;
+	background-color: $BlueGreen;
+	border: 1px solid $BlueGreen;
+	user-select: none;
+	transition: 0.3s;
+}
+
+.categoryBtn:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.categoryDropdown{
+	position: absolute;
+	top: 3em;
+	background-color: white;
+	border: 1px solid $BlueGreen;
+	border-radius: 0.4em;
+	z-index: 2;
+	animation: myAnim 0.3s ease-in-out 0s 1 alternate forwards;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.option{
+	padding: 0.4em 0.6em 0.4em 0.4em;
+	transition: 0.3s;
+	border-radius: 0.4em;
+}
+
+.option:hover{
+	cursor: pointer;
+	background-color: $BlueGreenShaded;
+	color: white;
+}
+
+/* Scale to Small Screens */
+@media only screen and (max-width: 768px) {
+    .textBox{
+		font-size: small;
+	}
+	.btn{
+		font-size: small;
+	}
+	.category{
+		font-size: small;
+	}
+}
+@media only screen and (max-width: 640px) {
+    .textBox{
+		font-size: x-small;
+	}
+	.btn{
+		font-size: x-small;
+	}
+	.category{
+		font-size: x-small;
+	}
+}
+@media only screen and (max-width: 480px) {
+    .textBox{
+		font-size: xx-small;
+	}
+	.btn{
+		font-size: xx-small;
+	}
+	.category{
+		font-size: xx-small;
+	}
+	.btnIcon{
+		top: 1px;
+	}
+}
