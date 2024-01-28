@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Link to Project
 
-https://montoya-trading-next.vercel.app/
+https://www.montoyatrading.com/
 
 ## Montoya Trading
 
@@ -28,12 +28,10 @@ A relatively simple website for my first project after graduating
 
 -Sanity.io (https://www.sanity.io/)
 
--Resend --to be added (https://resend.com/)
-
 I first tackled this project using React.js but then moved it into Next.js for better page routing and SEO Optimization and because it just pairs well with Vercel.
 
 Vercel because its cheap and comes with edge functions.
 
 I decided it would be best to use Sanity.io for a headless CMS for the company to use and update its content remotely.
 
-Resend because its recommended by Vercel as an API for emails.
+
